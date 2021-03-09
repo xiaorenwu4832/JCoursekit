@@ -667,7 +667,7 @@ namespace UV {
 /*
 Tilt Sensor block
 */
-//% weight=10 color=#33FF99 icon="\uf033" block="Tilt"
+//% weight=10 color=#33FF99 icon="\uf033" block="倾斜开关"
 namespace Tilt{
     let pin = DigitalPin.P0
     let result = 0;
@@ -678,7 +678,7 @@ namespace Tilt{
      * @param pin_arg pin at which the Tilt Senor DOUT line is connected;
      */
     //% blockId=Tilt_setPin
-    //% block="set Tilt pin |%pin_arg|"
+    //% block="设置倾斜开关引脚 |%pin_arg|"
     //% weight = 85
     export function setPin(pin_arg: DigitalPin): void {
         pin = pin_arg;
@@ -689,7 +689,7 @@ namespace Tilt{
      * Return the output data;
      */
     //% blockId=UV_getWhetherShaking
-    //% block="get whether shaking"
+    //% block="是否倾斜"
     //% weight = 75
     export function getWhetherShaking(): number {
         result = pins.digitalReadPin(pin);
@@ -702,11 +702,11 @@ namespace Tilt{
 /*
 Ultrasonic block
 */
-//% weight=8 color=#FF0000 icon="\uf0fb" block="Ultrasonic"
+//% weight=8 color=#FF0000 icon="\uf0fb" block="超声模块"
 namespace Ultrasonic{
 
     //% blockId=Ultrasonic_getDistance
-    //% block="get distance"
+    //% block="获得距离"
     //% weight=80
     export function getDistance(): number {
 
@@ -729,7 +729,7 @@ namespace Ultrasonic{
 /*
 TSL2581 sensor
 */
-//% weight=8 color=#C0C0C0 icon="\uf069" block="Light"
+//% weight=8 color=#C0C0C0 icon="\uf069" block="TSL2581"
 namespace Light{
 
     //must write as 1 when addressing COMMAND register
