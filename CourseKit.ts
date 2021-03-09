@@ -317,7 +317,7 @@ namespace Flame {
      * @param a_pin_arg Flame Sensor analog connected pin;
      */
     //% blockId=Flame_setApin
-    //% block="设置火焰检测模拟引脚" |%a_pin_arg|"
+    //% block="设置火焰检测模拟引脚|%a_pin_arg|"
     //% weight = 85
     export function setApin(a_pin_arg: AnalogPin): void {
         Apin = a_pin_arg;
