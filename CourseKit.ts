@@ -609,10 +609,50 @@ namespace BME280 {
 }
 
 
+/*
+remote block
+ */
+//% weight=15 color=#6600FF icon="\uf185" block="遥感"
+namespace remote {
+    let pinx = AnalogPin.P0
+    let piny = AnalogPin.P0
+    let adc = 0
+    /**
+     * Set pin at which the remote Senor AOUT line is connected;
+     * @param posX pin at which the remote Senor X line is connected;
+     * @param posY pin at which the remote Senor Y line is connected;
+     */
+    //% blockId=remote_setPin
+    //% block="设置遥感引脚X |%posX|Y |%posY|"
+    //% weight = 85
+    export function setPin(posX: AnalogPin,posY:AnalogPin): void {
+        pinx = posX;
+        piny = posY;
+    }
 
+    /**
+     * Return the adc value from the AnalogPin;
+     */
+    //% blockId=remoteX_getADCValue
+    //% block="获得遥感X值"
+    //% weight = 75
+    export function getADCValue(): number {
+        adc = pins.analogReadPin(pinx);
+        return adc;
+    }
+    
+     /**
+     * Return the adc value from the AnalogPin;
+     */
+    //% blockId=remoteX_getADCValue
+    //% block="获得遥感Y值"
+    //% weight = 75
+    export function getADCValue2(): number {
+        adc = pins.analogReadPin(piny);
+        return adc;
+    }
 
-
-
+}
 
 /*
 UV Sensor block
