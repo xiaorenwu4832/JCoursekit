@@ -612,7 +612,7 @@ namespace BME280 {
 /*
 remote block
  */
-//% weight=15 color=#6600FF icon="\uf185" block="遥感"
+//% weight=15 color=#F08080 icon="\uf185" block="遥感"
 namespace remote {
     let pinx = AnalogPin.P0
     let piny = AnalogPin.P0
@@ -640,11 +640,11 @@ namespace remote {
         adc = pins.analogReadPin(pinx);
         return adc;
     }
-    
+
      /**
      * Return the adc value from the AnalogPin;
      */
-    //% blockId=remoteX_getADCValue
+    //% blockId=remoteY_getADCValue
     //% block="获得遥感Y值"
     //% weight = 75
     export function getADCValue2(): number {
